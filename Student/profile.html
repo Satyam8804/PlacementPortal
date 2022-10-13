@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Student Profile</title>
+</head>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:400,500,600,700&display=swap');
+
+    *{
+       
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /* background:; */
+
+    }
+    h3{
+        
+        height: max-content;
+        padding: 15px;
+        color: #fff;
+        font-size: larger;
+
+        
+    }
+    nav{
+        background: #326789;
+        line-height: 30px;
+   justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+
+    }
+    .head{
+        display: flex;
+        flex-direction: row;
+        width:auto;
+        margin: 50px;
+       justify-content: space-between;
+       padding: 20px;
+        background: #78a6c8;
+/* box-shadow: 0 8px 32px 0 #e65b4f4e;
+backdrop-filter: blur( 4.5px );
+-webkit-backdrop-filter: blur( 4.5px ); */
+line-height: 25px;
+    }
+
+
+.info1{
+
+    width: auto;
+ color: #fff;
+}
+.img{
+ 
+    display: flex;
+        justify-content: left;
+        flex-direction: column;
+      width: auto;
+      height: 175px;
+      box-shadow: 0 3px 15px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 2.5px );
+-webkit-backdrop-filter: blur( 2.5px );
+        
+}
+    .img>img{
+    
+        width: 150px;
+        height: 150px;
+        
+        background: linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 14px) calc(100% - 14px) no-repeat,      
+              linear-gradient(210deg, #ffffff 0%, #326789 100%);border-radius: 0px;padding: 7px;box-sizing: border-box;    
+    
+    }
+
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content:flex-start;
+    margin-left: 50px;
+
+}
+#t1 tr>:nth-child(2){
+    color: grey;
+}
+.uploadPhoto{
+    height: 25px;
+    border: 1px solid gray;
+    background: #fff;
+    text-align: center;
+    color: black;
+    padding-top: 2px;
+    cursor: pointer;
+}
+.uploadPhoto:hover{
+    background-color: gray;
+    color: #ffff;
+}
+td{
+    line-height: 40px;
+}
+.list{
+    display: none;
+    position:relative;
+  background-color: #fff;
+  min-width: 100%;
+  height: 50px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: center;
+  
+}
+.fa-solid{
+    cursor: pointer;
+}
+
+.fa-solid:hover{
+    color: #fff;
+}
+.fa-solid:hover +.ul{
+    display: block;
+}
+
+li{
+    display: inline-block;
+ position: relative;
+    list-style: none;
+    font-size: 12px;
+    list-style: none;
+}
+
+#name{
+    font-size: 2rem;
+    color: #326789;
+    
+}
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content:flex-start;
+    margin: 50px;
+
+}
+
+.cont-box1{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    gap: 1rem;
+}
+#img2{
+    height: 75px;
+    width: 75px;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 5.5px );
+-webkit-backdrop-filter: blur( 5.5px );
+background: linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 14px) calc(100% - 14px) no-repeat,      
+              linear-gradient(210deg, #ffffff 0%, #326789 100%);border-radius: 0px;padding: 5px;box-sizing: border-box;    
+    
+    
+}
+.cont-box1{
+    color: grey;
+}
+
+#th1{
+    background: rgba(128, 128, 128, 0.336);
+    border-collapse: collapse;
+}
+#t2{
+    width: 100%;
+    
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 5.5px );
+-webkit-backdrop-filter: blur( 5.5px );
+}
+tr{
+    line-height: 30px;
+    padding: 10px;
+}
+#t2 tr:nth-child(n+2){
+    font-size: 1rem;
+    color: gray;
+}
+@media (max-width:665px){
+    .container{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .head{
+        margin:10px ;
+    }
+    .container1{
+        margin: auto;
+    }
+  #t2{
+    font-size: .5em;
+
+  }
+  .cont-box1{
+    margin: 1rem;
+  }
+  .container{
+    margin-top: 2rem;
+  }
+}
+
+
+</style>
+
+<body>
+    <nav>
+        <h3>My Profile</h3>
+        <i class="fa-solid fa-ellipsis"></i>
+        <div class="list">  
+            <ul>
+            <li><i class="fa-sharp fa-solid fa-pencil"></i>  Edit Profile</li>
+            <li><i class="fa-sharp fa-solid fa-gear"> </i>  Forget Password</li>
+        </ul>
+    </div>
+    </nav>   
+    <div class="head">
+
+    <div class="info1" id="info1">PERSONAL DETAILS</div>
+    <!-- <div class="info2" id="info1">EDUCATIONAL DETAILS</div> -->
+    </div>
+
+    <div class="container">
+    <div class="img">
+        <img src="/img/pic1.gif" alt="">
+        <div class="uploadPhoto">
+            <p>Upload photo</p>
+        </div>
+
+    </div>
+    <div class="details">
+
+        <table id="t1">
+            <tr>
+                <td>Name </td>
+                <td>Satyam Kumar</td>
+               
+            </tr>
+            <tr>
+                <td>Registration No. </td>
+                <td>12018969</td>
+              
+            </tr>
+            <tr>
+                <td>Program<br></td>
+                <td> B.Tech.(Computer Science & Engineering)</td>
+                
+            </tr>
+            <tr>
+                <td>Stream<br></td>
+                <td>Mechanical</td>
+                
+            </tr>
+            <tr>
+                <td>Enrollment Year<br></td>
+                <td>2020</td>
+                
+            </tr>
+            <tr>
+                <td>Backlogs<br></td>
+                <td>0</td>
+                
+            </tr>
+            <tr>
+                <td>Current CGPA<br></td>
+                <td>7.84</td>
+                
+            </tr>
+            <tr>
+                <td>Email </td>
+                <td>Satyam8804378323@gmail.com</td>
+                
+            </tr>
+            <tr>
+                <td>Contact No. </td>
+                <td>6207621814</td>
+                
+            </tr>
+            
+            <tr>
+                <td> Sex</td>
+                <td>Male</td>
+               
+            </tr>
+            <tr>
+                <td>D.O.B</td>
+                <td> 24-06-2002</td>
+
+            </tr>
+            <tr>
+                <td>Nationality</td>
+                <td> Indian</td>
+
+            </tr>
+            <tr>
+                <td>Current Address </td>
+                <td><address>Law Gate ,Near Lpu,phagwara,punjab</address></td>
+
+            </tr>
+            <tr>
+                <td>Permanent Address</td>
+                <td><address> Hanuman Nagar,patna,bihar</address></td>
+
+            </tr>
+        </table>
+    </div>
+    </div>
+
+    <div class="head">
+
+        <div class="info1" id="info1"> EDUCATIONAL DETAILS</div>
+        <!-- <div class="info2" id="info1">EDUCATIONAL DETAILS</div> -->
+        </div>
+        <div class="container1">
+            <div class="cont-box1">
+                <img id="img2" src="/img/pic1.gif" alt="">
+                <div class="box1 1">
+       <p><span id="name"> Satyam Kumar </span>  B.tech (Computer Science Engineering)</p>
+        <address>satyam8804378323@gmail.com</address> 
+        <p>6207621814</p>
+    </div>
+    </div>
+
+    <div class="e-detail">
+
+        <table id="t2">
+           
+        <tr id="th1">
+            <th>Certificate /Degree</th>
+            <th>Specialization</th>
+            <th>Institute</th>
+            <th>Passing Year</th>
+            <th>Board/University</th>
+            <th>Percentage</th>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>N/A</td>
+            <td>G.B.S.S</td>
+            <td>2018</td>
+            <td>CBSE</td>
+            <td>95</td>
+        </tr>
+        <tr>
+            <td>10+2</td>
+            <td>N/A</td>
+            <td>G.B.S.S</td>
+            <td>2020</td>
+            <td>CBSE</td>
+            <td>79</td>
+        </tr>
+        <tr>
+            <td>B.Tech</td>
+            <td>Computer</td>
+            <td>L.P.U</td>
+            <td>Pursuing</td>
+            <td>Private</td>
+            <td>78.4</td>
+        </tr>
+
+        </table>
+    </div>
+    </div>
+</body>
+</html>
