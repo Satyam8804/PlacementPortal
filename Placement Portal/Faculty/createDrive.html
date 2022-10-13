@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+
+
+    <title>Create Drive</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .Dform{
+        /* padding: 10px; */
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 5.5px );
+        -webkit-backdrop-filter: blur( 5.5px );
+    }
+    nav{
+        position: relative;
+        background-image: linear-gradient(#00bbba, #6454f0);
+        width: 100%;
+        line-height: 50px;
+        padding: 10px;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+       
+    }
+    h2{
+        text-shadow: 3px 3px 3px #695d5d;
+    }
+
+    
+  
+@media (max-width:770px){
+    .container, .container-sm {
+    max-width: 100%;
+}
+    input,input[type="text"],textarea{
+        width: 100%;
+    }
+
+    
+
+    #prog,#stream,#batch,#package,#Throughout,#course,#max-backlog{
+        width: 150px;
+    }
+    .Dform{
+        margin: 10px;
+        box-shadow: none;
+    }
+    table{
+        margin: 10px;
+    }
+  
+}
+</style>
+<body>
+    <nav>
+          <h2 class="head font-effect-outline ">Create New Drive</h2>
+    </nav>
+   <div class="Dform  container mb-3 ">
+    <form action="">
+        <table>
+            <tr>
+                <td >Name</td>
+                <td><input type="text" required="true"  name="neme" id="name" class="form-control col-sm-2 mt-3"></td>
+            </tr>
+            <tr>
+                <td>Program</td>
+                <td>
+                         <select  name="program" id="prog" class="form-select form-select-sm mt-3">
+                          <option value="Bachelor">Bachelor</option>
+                          <option value="Master">Master</option>
+                          <option value="PHD">PHD</option>
+                          <option value="Diploma">Diploma</option>
+                        </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Stream</td>
+                <td>
+                        <select name="stream" id="stream" class="form-select form-select-sm mt-3">
+                         <option value="Bachelor">production</option>
+                         <option value="Master">Mechanical</option>
+                         <option value="PHD">Thermal</option>
+                         <option value="Diploma">ECE</option>
+                       </select>
+               </td>
+            </tr>
+            <tr>
+                <td>Batch</td>
+                <td>
+                        <select name="batch" id="batch" class="form-select form-select-sm mt-3">
+                         <option value="2010">2010</option>
+                         <option value="2011">2011</option>
+                         <option value="2012">2012</option>
+                         <option value="2013">2013</option>
+                         <option value="2014">2014</option>
+                         <option value="2015">2015</option>
+                         <option value="2016">2016</option>
+                         <option value="2017">2017</option>
+                         <option value="2018">2018</option>
+                         <option value="2019">2019</option>
+                         <option value="2020">2020</option>
+                         <option value="2021">2021</option>
+                         <option value="2022">2022</option>
+                         
+                       </select>
+                </td>
+            </tr>
+            <tr >
+  
+                <td>Creteria</td>
+                <td>
+                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+
+                    <label class="form-check-label">Percentage</label>
+                </td>
+            </tr>
+            <tr>   
+                <td></td>
+                <td>
+                    <select class="form-select form-select-sm " id="Throughout">
+                        <option value="throught">Throughout %</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option><option value="60">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option><option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option><option value="68">68</option><option value="69">69</option><option value="70">70</option><option value="71">71</option><option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option><option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option><option value="80">80</option><option value="81">81</option><option value="82">82</option><option value="83">83</option><option value="84">84</option><option value="85">85</option><option value="86">86</option><option value="87">87</option><option value="88">88</option><option value="89">89</option><option value="90">90</option><option value="91">91</option><option value="92">92</option><option value="93">93</option><option value="94">94</option><option value="95">95</option><option value="96">96</option><option value="97">97</option><option value="98">98</option><option value="99">99</option><option value="100">100</option>
+                    </select>
+
+</td></tr>
+<tr>
+    <td></td>
+            <td>
+                <select class="form-select form-select-sm" id="course">
+                <option value="throught">Course %</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+                <option value="46">46</option>
+                <option value="47">47</option>
+                <option value="48">48</option>
+                <option value="49">49</option>
+                <option value="50">50</option>
+                <option value="51">51</option>
+                <option value="52">52</option>
+                <option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option><option value="60">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option><option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option><option value="68">68</option><option value="69">69</option><option value="70">70</option><option value="71">71</option><option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option><option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option><option value="80">80</option><option value="81">81</option><option value="82">82</option><option value="83">83</option><option value="84">84</option><option value="85">85</option><option value="86">86</option><option value="87">87</option><option value="88">88</option><option value="89">89</option><option value="90">90</option><option value="91">91</option><option value="92">92</option><option value="93">93</option><option value="94">94</option><option value="95">95</option><option value="96">96</option><option value="97">97</option><option value="98">98</option><option value="99">99</option><option value="100">100</option></select></td>
+            </tr>
+            <tr>
+                <td></td>
+                   <td>
+                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+
+                    <label class="form-check-label">Backlogs</label>
+                   </td>
+                </tr>
+                   <tr>
+                    <td></td>
+                   <td><select class="form-select form-select-sm" id="max-backlog" >
+                    <option value="throught">Maximum Backlogs</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Package</td>
+                <td>
+                    <select class="form-select form-select-sm" id="package">
+                        <option value="package">Select Package</option>
+                       
+                        <option value="1">1 lacs</option>
+                        <option value="2">2 lacs</option>
+                        <option value="3">3 lacs</option>
+                        <option value="4">4 lacs</option>
+                        <option value="5">5 lacs</option>
+                        <option value="6">6 lacs</option>
+                        <option value="7">7 lacs</option>
+                        <option value="8">8 lacs</option>
+                        <option value="9">9 lacs</option>
+                        <option value="10">10 lacs</option>
+                        <option value="11">11 lacs</option>
+                        <option value="12">12 lacs</option>
+                        <option value="13">13 lacs</option>
+                        <option value="14">14 lacs</option>
+                        <option value="15">15 lacs</option>
+                        <option value="16">16 lacs</option>
+                        <option value="17">17 lacs</option>
+                        <option value="18">18 lacs</option>
+                        <option value="19">19 lacs</option>
+                        <option value="20">20 lacs</option>
+                        <option value="21">21 lacs</option>
+                        <option value="22">22 lacs</option>
+                        <option value="23">23 lacs</option>
+                        <option value="24">24 lacs</option>
+                        <option value="25">25 lacs</option>
+                        <option value="26">26 lacs</option>
+                        <option value="27">27 lacs</option>
+                        <option value="28">28 lacs</option>
+                        <option value="29">29 lacs</option>
+                        <option value="30">30 lacs</option>
+                        <option value="31">31 lacs</option>
+                        <option value="32">32 lacs</option>
+                        <option value="33">33 lacs</option>
+                        <option value="34">34 lacs</option>
+                        <option value="35">35 lacs</option>
+                        <option value="36">36 lacs</option>
+                        <option value="37">37 lacs</option>
+                        <option value="38">38 lacs</option>
+                        <option value="39">39 lacs</option>
+                        <option value="40">40 lacs</option>
+                        <option value="41">41 lacs</option>
+                        <option value="42">42 lacs</option>
+                        <option value="43">43 lacs</option>
+                        <option value="44">44 lacs</option>
+                        <option value="45">45 lacs</option>
+                        <option value="46">46 lacs</option>
+                        <option value="47">47 lacs</option>
+                        <option value="48">48 lacs</option>
+                        <option value="49">49 lacs</option>
+                        <option value="50">50 lacs</option>
+                        </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Drive</td>
+                <td><input type="date" name="date" id="date" class="form-control-sm mt-2" ></td>
+            </tr>
+            <tr>
+                <td>Last Date of Application</td>
+                <td><input type="date" name="date" id="date" class="form-control-sm mt-2" ></td>
+            </tr>
+            <tr>
+                <td>
+                    Designations
+                </td>
+                <td> <select name="designation" id="designation" class="form-select form-select-sm mt-3">
+                    <option value="Executive Eng.">Executive Eng.</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Manager">Manager</option>
+                    <option value=""></option>
+                  </select></td>
+            </tr>
+<tr>
+    <td>Description</td>
+    <td><textarea name="description" id="" cols="30" rows="10" class=" form-control-sm mt-3" placeholder="Descriptions" ></textarea></td>
+</tr>
+<tr>
+    <td></td>
+    <!-- <td></td> -->
+    <td ><button type="submit" class="btn btn-success">Create</button></td>
+    <td><button type="submit" class="btn btn-danger">Reset</button></td>
+</tr>
+        </table>
+    </form>
+   </div>
+</body>
+</html>
