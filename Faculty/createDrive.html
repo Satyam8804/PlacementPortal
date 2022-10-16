@@ -19,13 +19,44 @@
         padding: 0px;
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
+    /* .container1{
+        display: block;
+        justify-content: center;
+        flex-direction: column;
+        
+    } */
     #mainForm{
+        position: relative;
+        width: 100%;
         display: none;
+        padding: 20px;
+        border-radius: 10px;
         /* padding: 10px; */
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
         backdrop-filter: blur( 5.5px );
         -webkit-backdrop-filter: blur( 5.5px );
     }
+    .drive{
+        position: relative;
+        /* width: 100%; */
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 5.5px );
+        -webkit-backdrop-filter: blur( 5.5px );
+        margin:10px;
+        border-radius: 10px;
+        padding: 20px;
+    
+    }
+    #t2{
+        width: 100%;
+        text-align: center;
+        line-height: 40px;
+    }
+    th{
+        background: rgba(128, 128, 128, 0.265);
+        border-radius: 5px;
+    }
+   
     nav{
         position: relative;
         display: flex;
@@ -34,6 +65,9 @@
         width: 100%;
         line-height: 50px;
         padding: 10px;
+    }
+    #newDrive{
+        line-height: 50px;
     }
     a{
         text-decoration: none;
@@ -48,13 +82,47 @@
         background: none;
         border: none;
         color: #fff;
+        
     }
+
     #create:hover{
         color: black;
     }
     span{
         font-size: smaller;
     
+    }
+    .popUp{
+        position: fixed;
+        width: 500px;
+        height: 200px;
+/* top: 50%; */
+        left: 50%;
+        margin-left: -250px;
+        /* border: 1px solid gray; */
+        background:white;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.627);
+        /* backdrop-filter: blur( 5.5px ); */
+        /* -webkit-backdrop-filter: blur( 5.5px ); */
+        border-radius: 10px;
+        top: -10000px;
+        padding: 10px;
+        z-index: 99;
+
+    }
+    .head{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+
+    }
+    .fa-solid{
+        height: fit-content;
+    }
+    .fa-solid:hover{
+        cursor: pointer;
+        color: gray;
     }
   
 @media (max-width:770px){
@@ -71,8 +139,10 @@
         width: 100%;
     }
     .Dform{
-       
+        /* margin: 10px; */
+        margin-right: 10px;
         box-shadow: none;
+        
     }
     table{
         margin: 10px;
@@ -81,17 +151,52 @@
     tr{
         line-height: 3rem;
     }
-  
+  .popUp{
+    width: 300px;
+    /* margin-top: -100px;  */
+margin-left: -150px;
+  }
 }
 </style>
 <body>
+    <div class="container1">
     <nav>
           <h2 class="head font-effect-outline ">View Drive</h2>
-          <p > <span> Create New Drive </span><button id="create" onclick="display()" class="fa fa-plus" aria-hidden="true"></button></p>
+          <p id="newDrive"> <span> Create New Drive </span><button id="create" onclick="display()" class="fa fa-plus" aria-hidden="true"></button></p>
     </nav>
+
+    <div class="drive  mb-3">
+        <table id="t2">
+            <th>Drive Code</th>
+            <th>Company</th>
+            <th>Status</th>
+            <th>Job Profile</th>
+            <th>Registered</th>
+            <tr>
+                <td>001</td>
+                <td>Amazon</td>
+                <td>Open</td>
+                <td><button class="btn btn-primary" onclick="showPopUp()">See Job Profile</button></td>
+                <td><button class="btn btn-primary">Register Here</button></td>
+            </tr>
+        </table>
+    </div>
+
+
+<div class="popUp container" id="popUp">
+   <div class="head">
+    <h5>Job Details :</h5>
+    <i class="fa-solid fa-square-xmark" onclick="removePopUp()"></i>
+   </div>
+</div>
+
+
    <div class="Dform  container mb-3 " id="mainForm">
-    <form action="">
+    <h2 style="text-align:center ;">Create Drive</h2>
+    <form action="get">
+
         <table>
+   
             <tr>
                 <td >Name</td>
                 <td><input type="text" required="true"  name="neme" id="name" class="form-control col-sm-2 mt-3"></td>
@@ -340,18 +445,32 @@
 <tr>
     <td></td>
     <!-- <td></td> -->
-    <td ><button type="submit" class="btn btn-success">Create</button></td>
-    <td><button type="submit" class="btn btn-danger">Reset</button></td>
+    <td ><button type="submit" class="btn btn-success">Create</button>  <button type="reset" onclick="reset()" class="btn btn-danger">Reset</button></td>
+    <!-- <td></td> -->
 </tr>
         </table>
     </form>
    </div>
-
+</div>
    <script>
    function display(){
     document.getElementById('mainForm').style.display="block";
+    document.getElementById('newDrive').style.display="none"
 }
-    
+    reset=()=>{
+        document.getElementsByTagName('input').value="";
+    }
+    showPopUp=()=>{
+        document.getElementById('popUp').style.top="150px"
+        document.body.style.backgroundColor = 'gray';
+    }
+
+    //remove popUP
+
+    removePopUp=()=>{
+        document.getElementById('popUp').style.top="-10000px"
+        document.body.style.background = 'none';
+    }
    </script>
    
 </body>
