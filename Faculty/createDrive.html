@@ -199,7 +199,7 @@
    
             <tr>
                 <td >Name</td>
-                <td><input type="text" required="true"  name="neme" id="name" class="form-control col-sm-2 mt-3"></td>
+                <td><input type="text" required="true"  name="name" id="name" class="form-control col-sm-2 mt-3"></td>
             </tr>
             <tr>
                 <td>Program</td>
@@ -445,7 +445,7 @@
 <tr>
     <td></td>
     <!-- <td></td> -->
-    <td ><button type="submit" class="btn btn-success" onclick="submitForm()">Create</button>  <button type="reset" onclick="reset()" class="btn btn-danger">Reset</button></td>
+    <td ><button  class="btn btn-success" onclick="submitForm();return false;">Create</button>  <button type="reset" onclick="reset()" class="btn btn-danger">Reset</button></td>
     <!-- <td></td> -->
 </tr>
         </table>
@@ -477,29 +477,30 @@
     }
 
 
-// js for inputs
-var jobProfile =document.getElementById('jp').innerHTML;
-var reg= document.getElementById('register').innerHTML;
-
-name="FlipCart"
+    // js for inputs
+  
+    // name="FlipCart"
 function submitForm() {
+    var jobProfile =document.getElementById('jp').innerHTML;
+    var registration= document.getElementById('reg').innerHTML;
     driveCode=001
-    // var name =document.getElementById('name').value;
+    var name1 =document.getElementById('name').value;
     var table = document.getElementById("t2");
-  var row = table.insertRow(1);
+    var row = table.insertRow(1);
   var code = row.insertCell(0);
-  var company = row.insertCell(2);
+  var company = row.insertCell(1);
   var status = row.insertCell(2)
   var profile =row.insertCell(3)
   var register =row.insertCell(4)
 
  code.innerHTML=driveCode+1
- company.innerHTML="flipcart";
- status.innerHTML="open";
+ company.innerHTML=name1;
+ status.innerHTML='Open';
  profile.innerHTML=jobProfile;
- register.innerHTML=reg;
+ register.innerHTML=registration;
+ document.getElementById('mainForm').style.display="none"
 
-// }
+}
 
    </script>
    
