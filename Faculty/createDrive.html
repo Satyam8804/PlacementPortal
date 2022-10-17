@@ -173,7 +173,7 @@
             <th >Job Profile</th>
             <th>Registered</th>
             <tr>
-                <td>001</td>
+                <td>1</td>
                 <td>Amazon</td>
                 <td>Open</td>
                 <td id="jp"><button class="btn btn-primary" onclick="showPopUp()">See Job Profile</button></td>
@@ -483,7 +483,7 @@
 function submitForm() {
     var jobProfile =document.getElementById('jp').innerHTML;
     var registration= document.getElementById('reg').innerHTML;
-    driveCode=001
+    driveCode=1
     var name1 =document.getElementById('name').value;
     var table = document.getElementById("t2");
     var row = table.insertRow(1);
@@ -499,6 +499,7 @@ function submitForm() {
  profile.innerHTML=jobProfile;
  register.innerHTML=registration;
  document.getElementById('mainForm').style.display="none"
+ document.getElementById('newDrive').style.display="block"
 
 }
 
