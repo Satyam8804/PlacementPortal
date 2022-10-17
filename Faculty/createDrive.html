@@ -96,14 +96,13 @@
         position: fixed;
         width: 500px;
         height: 200px;
-/* top: 50%; */
+
         left: 50%;
         margin-left: -250px;
-        /* border: 1px solid gray; */
+        
         background:white;
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.627);
-        /* backdrop-filter: blur( 5.5px ); */
-        /* -webkit-backdrop-filter: blur( 5.5px ); */
+        
         border-radius: 10px;
         top: -10000px;
         padding: 10px;
@@ -114,7 +113,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-
 
     }
     .fa-solid{
@@ -131,6 +129,7 @@
 }
     input[type="text"],input[type="date"],textarea{
         width: 100%;
+        z-index: -1;
     }
 
     
@@ -139,8 +138,7 @@
         width: 100%;
     }
     .Dform{
-        /* margin: 10px; */
-        margin-right: 10px;
+      
         box-shadow: none;
         
     }
@@ -153,8 +151,10 @@
     }
   .popUp{
     width: 300px;
-    /* margin-top: -100px;  */
-margin-left: -150px;
+    margin-left: -150px;
+  }
+  .drive{
+    padding-left: 0%;
   }
 }
 </style>
@@ -170,14 +170,14 @@ margin-left: -150px;
             <th>Drive Code</th>
             <th>Company</th>
             <th>Status</th>
-            <th>Job Profile</th>
+            <th >Job Profile</th>
             <th>Registered</th>
             <tr>
                 <td>001</td>
                 <td>Amazon</td>
                 <td>Open</td>
-                <td><button class="btn btn-primary" onclick="showPopUp()">See Job Profile</button></td>
-                <td><button class="btn btn-primary">Register Here</button></td>
+                <td id="jp"><button class="btn btn-primary" onclick="showPopUp()">See Job Profile</button></td>
+                <td id="reg"><button class="btn btn-primary">Register Here</button></td>
             </tr>
         </table>
     </div>
@@ -193,7 +193,7 @@ margin-left: -150px;
 
    <div class="Dform  container mb-3 " id="mainForm">
     <h2 style="text-align:center ;">Create Drive</h2>
-    <form action="get">
+    <form action="">
 
         <table>
    
@@ -445,7 +445,7 @@ margin-left: -150px;
 <tr>
     <td></td>
     <!-- <td></td> -->
-    <td ><button type="submit" class="btn btn-success">Create</button>  <button type="reset" onclick="reset()" class="btn btn-danger">Reset</button></td>
+    <td ><button type="submit" class="btn btn-success" onclick="submitForm()">Create</button>  <button type="reset" onclick="reset()" class="btn btn-danger">Reset</button></td>
     <!-- <td></td> -->
 </tr>
         </table>
@@ -463,6 +463,8 @@ margin-left: -150px;
     showPopUp=()=>{
         document.getElementById('popUp').style.top="150px"
         document.body.style.backgroundColor = 'gray';
+        document.getElementById('newDrive').style.display="none"
+        document.getElementById('mainForm').style.display="none"
     }
 
     //remove popUP
@@ -470,7 +472,35 @@ margin-left: -150px;
     removePopUp=()=>{
         document.getElementById('popUp').style.top="-10000px"
         document.body.style.background = 'none';
+        document.getElementById('newDrive').style.display="block"
+
     }
+
+
+// js for inputs
+var jobProfile =document.getElementById('jp').innerHTML;
+var reg= document.getElementById('register').innerHTML;
+
+name="FlipCart"
+function submitForm() {
+    driveCode=001
+    // var name =document.getElementById('name').value;
+    var table = document.getElementById("t2");
+  var row = table.insertRow(1);
+  var code = row.insertCell(0);
+  var company = row.insertCell(2);
+  var status = row.insertCell(2)
+  var profile =row.insertCell(3)
+  var register =row.insertCell(4)
+
+ code.innerHTML=driveCode+1
+ company.innerHTML="flipcart";
+ status.innerHTML="open";
+ profile.innerHTML=jobProfile;
+ register.innerHTML=reg;
+
+// }
+
    </script>
    
 </body>
