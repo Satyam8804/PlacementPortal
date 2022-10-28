@@ -122,6 +122,9 @@
         cursor: pointer;
         color: gray;
     }
+    .btn2{
+       display: none;
+    }
   
 @media (max-width:770px){
     .container, .container-sm {
@@ -164,7 +167,8 @@
           <h2 class="head font-effect-outline ">View Drive</h2>
           <p id="newDrive"> <span> Create New Drive </span><button id="create" onclick="display()" class="fa fa-plus" aria-hidden="true"></button></p>
     </nav>
-
+    <div id="jp" class="btn2"><button class=" btn btn-primary" onclick="showPopUp()" >See Job Profile</button></div>
+    <div id="reg" class="btn2"><button class=" btn btn-primary" onclick="register()" id="btn2"  >View Registered Student</button></div>
     <div class="drive  mb-3">
         <table id="t2">
             <th>Drive Code</th>
@@ -173,13 +177,14 @@
             <th >Job Profile</th>
             <th>Registered</th>
             <tr>
-                <td>1</td>
-                <td>Amazon</td>
-                <td>Open</td>
-                <td id="jp"><button class="btn btn-primary" onclick="showPopUp()">See Job Profile</button></td>
-                <td id="reg"><button class="btn btn-primary">Register Here</button></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td ></td>
+                <td></td>
             </tr>
         </table>
+       
     </div>
 
 
@@ -188,6 +193,9 @@
     <h5>Job Details :</h5>
     <i class="fa-solid fa-square-xmark" onclick="removePopUp()"></i>
    </div>
+
+   <div class="date"><p>Open Till : <span id="openDate"></span> to <span id="closingDate"></span></p></div>
+   <div > <p>Description : <span id="description"></span></p></div>
 </div>
 
 
@@ -421,11 +429,11 @@
             </tr>
             <tr>
                 <td>Date of Drive</td>
-                <td><input type="date" name="date" id="date" class="form-control-sm mt-2" ></td>
+                <td><input type="date" name="date" id="date1" class="form-control-sm mt-2" ></td>
             </tr>
             <tr>
                 <td>Last Date of Application</td>
-                <td><input type="date" name="date" id="date" class="form-control-sm mt-2" ></td>
+                <td><input type="date" name="date" id="date2" class="form-control-sm mt-2" ></td>
             </tr>
             <tr>
                 <td>
@@ -440,7 +448,7 @@
             </tr>
 <tr>
     <td>Description</td>
-    <td><textarea name="description" id="" cols="30" rows="10" class=" form-control-sm mt-3" placeholder="Descriptions" ></textarea></td>
+    <td><textarea name="description" id="descript" cols="30" rows="10" class=" form-control-sm mt-3" placeholder="Descriptions" ></textarea></td>
 </tr>
 <tr>
     <td></td>
@@ -480,26 +488,46 @@
     // js for inputs
   
     // name="FlipCart"
+    i=1;
+    var driveCode=1;
 function submitForm() {
+    var openDate= document.getElementById('date1').value;
+    var closeDate= document.getElementById('date2').value;
+    var discription= document.getElementById('descript').value;
     var jobProfile =document.getElementById('jp').innerHTML;
     var registration= document.getElementById('reg').innerHTML;
-    driveCode=1
+    
     var name1 =document.getElementById('name').value;
     var table = document.getElementById("t2");
-    var row = table.insertRow(1);
+    var row = table.insertRow(i);
   var code = row.insertCell(0);
   var company = row.insertCell(1);
   var status = row.insertCell(2)
   var profile =row.insertCell(3)
   var register =row.insertCell(4)
+  i=i+1;
 
- code.innerHTML=driveCode+1
+ code.innerHTML=driveCode
+ driveCode=driveCode+1
  company.innerHTML=name1;
  status.innerHTML='Open';
  profile.innerHTML=jobProfile;
  register.innerHTML=registration;
  document.getElementById('mainForm').style.display="none"
  document.getElementById('newDrive').style.display="block"
+
+
+ // job Profile
+
+ document.getElementById('openDate').innerHTML=openDate;
+ document.getElementById('closingDate').innerHTML=closeDate;
+
+ document.getElementById('description').innerHTML=discription;
+}
+
+register=()=>{
+    document.getElementById('btn2').innerText="Registered";
+    document.getElementById('btn2').style.background="gray";
 
 }
 
