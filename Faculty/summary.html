@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+nav{
+display: flex;
+flex-direction: column;
+background: #00bbba;
+background-image: linear-gradient(#00bbba, #6454f0);
+line-height: 40px;
+padding: 10px;
+
+}
+
+nav>p{
+padding-left:15px;
+border-left: 5px solid #fff;
+width: fit-content;
+color: #fff;
+font-size: 25px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5px; 
+    height: 100vh;
+    background-image: linear-gradient(to top,#f7b5b6b0,#a6e6d69c);
+    gap: 3rem;
+}
+.driveDetail{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    /* padding: 20px; */
+    /* width: 100%; */
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    background: #fff;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 5.5px );
+-webkit-backdrop-filter: blur( 5.5px );
+font-size: 12px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+table{
+    width: 100%;
+    text-align: center;
+}
+th{
+      font-size: 1em;
+      border: none;
+      text-transform: uppercase;
+      line-height: 50px;
+    }
+    td{
+      font-size: 1rem;
+      line-height: 40px;
+    }
+    tr:nth-child(n+1):hover{
+      background: rgba(173, 169, 169, 0.103);
+    }
+    tr:nth-child(1){
+      background: rgba(128, 128, 128, 0.342);
+     
+    }
+    h2{
+        text-align: center;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background: #5244cb60;
+        padding: 5px;
+    }
+    img{
+        height: 100px;
+        width: 100px;
+    }
+    .img1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 2rem;
+        padding: 2rem;
+    }
+</style>
+
+<body>
+    <nav>
+        <p class="head font-effect-outline ">   Summary  </p>
+</nav>
+<div class="content">
+
+    <div class="driveDetail">
+        <h2>Top Recruter</h2>
+        <div class="img1">
+            <img src="../img/google.png" alt="">
+        <img src="../img/amazon.png" alt="">
+        <img src="../img/flipcart.png" alt="">
+        <img src="../img/tcs.png" alt="">
+        </div>
+        
+
+        
+       </div>
+       <div class="driveDetail">
+        <table>
+            <th>DRIVE TYPE</th>
+            <th> No of PARTICIPATED student</th>
+            <th>No. of SELECTED student</th>
+
+            <tr>
+                <td>
+                    Competetive Event
+                </td>
+                <td>500</td>
+                <td>180</td>
+               
+            </tr>
+           
+            <tr>
+                <td>
+                    Summer Intership
+                </td>
+                <td>400</td>
+                <td>50</td>
+               
+            </tr>
+           
+            
+        </table>
+       </div>
+</div>
+</body>
+</html>
