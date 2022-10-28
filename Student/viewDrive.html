@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+
+    <title>View Drive</title>
+    <style>
+         *{
+        margin: 0px;
+        padding: 0px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+       nav{
+        position: relative;
+        background-image: linear-gradient(#00bbba, #6454f0);
+        width: 100%;
+        line-height: 50px;
+        padding: 10px;
+    }
+    .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px; 
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to top,#f7b5b6b0,#a6e6d69c);
+    gap: 3rem;
+}
+.d{
+    height: fit-content;
+    padding: 20px;
+     width: 100%;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    background: #fff;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 5.5px );
+-webkit-backdrop-filter: blur( 5.5px );
+font-size: 12px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.details{
+  width: 100%;
+}
+img{
+  height: 75px;
+  width: 75px;
+}
+.d{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.head2{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  /* gap: 100px; */
+}
+.base{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+ 
+}
+button{
+  height: 40px;
+  width: 80px;
+  border-radius: 10px;
+  border: 2px solid grey;
+  color: #fff;
+  background: #00bbba;
+}
+button:hover{
+background-color: #fff;
+border: 2px solid green;
+color: #00bbba;
+
+}
+span{
+  font-size: larger;
+  font-weight: bold;
+  color: #00bbba;
+}
+h5{
+  color: #6454f0;
+}
+@media (max-width:530px){
+.content{
+    flex-wrap: wrap;
+    height: auto;
+    
+    gap: 1rem;
+}
+
+.d{
+  flex-wrap: wrap;
+}
+.base{
+  gap: 50px;
+}
+}
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h2 class="head font-effect-outline ">Drive Registration</h2>
+  </nav>
+
+  <div class="content">
+    <div class="d d1">
+      <div class="logo">
+        <img src="../img/google.png" alt="">
+      </div>
+      <div class="details">
+        <div class="head2">
+            <h5>Google </h5>
+         
+          <p>Package : 8 lacs - 10 lacs per annum</p>
+
+      
+        </div>
+<hr>
+<div class="base">
+  <div class="designation">
+    <p><span>Designation :</span> Software Engineer (PHP ,JAVA ,FullStack), Software Tester ,Business Analyst</p>
+  </div>
+  <div class="apply">
+    <button>Apply</button>
+  </div>
+</div>
+      </div>
+    </div>
+    <div class="d d1">
+      <div class="logo">
+        <img src="../img/flipcart.png" alt="">
+      </div>
+      <div class="details">
+        <div class="head2">
+          <h5>FlipKart </h5>
+          <p>Package : 8 lacs - 10 lacs per annum</p>
+        </div>
+        <hr>
+        <div class="base">
+          <div class="designation">
+            <p><span>Designation :</span> Software Engineer (PHP ,JAVA ,FullStack), Software Tester ,Business Analyst</p>
+          </div>
+          <div class="apply">
+            <button>Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d d1">
+      <div class="logo">
+        <img src="../img/amazon.png" alt="">
+      </div>
+      <div class="details">
+        <div class="head2">
+          <h5>Amazon India </h5>
+          <p>Package : 8 lacs - 10 lacs per annum</p>
+        </div>
+        <hr>
+        <div class="base">
+          <div class="designation">
+            <p><span>Designation :</span> Software Engineer (PHP ,JAVA ,FullStack), Software Tester ,Business Analyst</p>
+          </div>
+          <div class="apply">
+            <button>Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
